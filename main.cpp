@@ -3,6 +3,8 @@
 #include <iostream>
 #include <iomanip>   // for std::fixed and std::setprecision
 
+using namespace std; 
+
 int main() {
     // =============================================
     //  Pre-filled test scores (30 students)
@@ -29,7 +31,7 @@ int sum=0;
     for (int i = 0; i < numStudents; i++) {
         sum += scores [i];
         if (scores[i] > highest) highest = scores[i];
-        if (scores[i] < lowwest) lowest = scores[i];
+        if (scores[i] < lowest) lowest = scores[i];
         if (scores[i] >=60) passedCount++;
         if (scores[i] >90) gradeAcount++;
     }
@@ -55,7 +57,7 @@ int sum=0;
     for (int s : scores) {
         cout << s << " ";
     }
-    cout endl;
+    cout << endl;
  
      cout << "Scores in reverse order:" << endl;
     for (int i = numStudents - 1; i >=0; i--) {
