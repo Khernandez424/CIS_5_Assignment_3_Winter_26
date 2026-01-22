@@ -33,7 +33,7 @@ int sum=0;
         if (scores[i] >=60) passedCount++;
         if (scores[i] >90) gradeAcount++;
     }
-    double average = static_cast<double>(sum) / numStudents
+    double average = static_cast<double>(sum) / numStudents;
 
     // =============================================
     //  Output
@@ -50,12 +50,14 @@ int sum=0;
     // Print scores using range-based for (modern & clean)
 
     // Print in reverse using classic for
-// Original order using range-based for cout << "Scores in original order:" << endl;
+
+     cout << "Scores in original order:" << endl;
     for (int s : scores) {
         cout << s << " ";
     }
     cout endl;
-    // Reverse order using classic for cout << "Scores in reverse order:" << endl;
+ 
+     cout << "Scores in reverse order:" << endl;
     for (int i = numStudents - 1; i >=0; i--) {
         cout << scores[i] << " ";
     }
