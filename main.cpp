@@ -20,15 +20,45 @@ int main() {
     // =============================================
     //  Calculations
     // =============================================
+int sum=0;
+    int highest = scores [0];
+    int lowest = scores [0];
+    int passedCount = 0;
+    int gradeAcount =0;
 
+    for (int i = 0; i < numStudents; i++) {
+        sum += scores [i];
+        if (scores[i] > highest) highest = scores[i];
+        if (scores[i] < lowwest) lowest = scores[i];
+        if (scores[i] >=60) passedCount++;
+        if (scores[i] >90) gradeAcount++;
+    }
+    double average = static_cast<double>(sum) / numStudents
 
     // =============================================
     //  Output
     // =============================================
+    cout << "Number of students: " <<
+        numStudents << endl;
+    cout << "Average score "<< fixed
+        << setprecision(2) << average << endl;
+    cout << "Highest score: " << highest << endl;
+    cout << "Lowest score: " << lowest << endl;
+    cout << "Students passed: : << passedCount << " (>=60)" << endl;
+        cout << "Students with A: " << gradeAcount << " (>=90)" << endl;
 
     // Print scores using range-based for (modern & clean)
 
     // Print in reverse using classic for
-
+// Original order using range-based for cout << "Scores in original order:" << endl;
+    for (int s : scores) {
+        cout << s << " ";
+    }
+    cout endl;
+    // Reverse order using classic for cout << "Scores in reverse order:" << endl;
+    for (int i = numStudents - 1; i >=0; i--) {
+        cout << scores[i] << " ";
+    }
+    cout << endl;
     return 0;
 }
