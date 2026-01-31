@@ -46,7 +46,7 @@ int sum=0;
         << setprecision(2) << average << endl;
     cout << "Highest score: " << highest << endl;
     cout << "Lowest score: " << lowest << endl;
-    cout << "Students passed: : << passedCount << " (>=60)" << endl;
+    cout << "Students passed: : << passedCount ? << " (>=60)" << endl;
         cout << "Students with A: " << gradeAcount << " (>=90)" << endl;
 
     // Print scores using range-based for (modern & clean)
